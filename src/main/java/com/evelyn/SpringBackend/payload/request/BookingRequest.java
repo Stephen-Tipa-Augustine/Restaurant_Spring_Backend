@@ -24,7 +24,7 @@ public class BookingRequest {
 
     @NotBlank
     @Size(max = 10)
-    private Integer people;
+    private String people;
 
     @NotBlank
     @Size(max = 10000)
@@ -46,7 +46,7 @@ public class BookingRequest {
         this.name = name;
     }
 
-    public void setPeople(Integer people) {
+    public void setPeople(String people) {
         this.people = people;
     }
 
@@ -74,7 +74,7 @@ public class BookingRequest {
         return name;
     }
 
-    public Integer getPeople() {
+    public String getPeople() {
         return people;
     }
 

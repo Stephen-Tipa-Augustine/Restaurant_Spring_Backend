@@ -25,7 +25,7 @@ public class Booking {
     private String time;
 
     @Column(name = "people", nullable = false, length = 10)
-    private Integer people;
+    private String people;
 
     @Column(name = "message", nullable = false, length = 10000)
     private String message;
@@ -34,7 +34,7 @@ public class Booking {
 
     }
 
-    public Booking(String name, String email, String phone, String date, String time, Integer people, String message) {
+    public Booking(String name, String email, String phone, String date, String time, String people, String message) {
         this.name = name;
         this.email = email;
         this.phone = phone;
@@ -64,7 +64,7 @@ public class Booking {
         this.name = name;
     }
 
-    public void setPeople(Integer people) {
+    public void setPeople(String people) {
         this.people = people;
     }
 
@@ -96,7 +96,7 @@ public class Booking {
         return name;
     }
 
-    public Integer getPeople() {
+    public String getPeople() {
         return people;
     }
 

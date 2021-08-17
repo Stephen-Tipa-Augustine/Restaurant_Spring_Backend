@@ -52,7 +52,6 @@ public class TestController {
 	}
 
 	@PostMapping("/receive-message")
-	@PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
 	public String receiveMessage(@Valid @RequestBody ContactRequest contactRequest) {
 		Contact contact = new Contact(
 			contactRequest.getName(),
